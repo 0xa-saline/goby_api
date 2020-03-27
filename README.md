@@ -93,3 +93,7 @@ curl 127.0.0.1:8361/api/v1/debugExp -d '{"hostinfo":"{{ .HostInfo }}", "vulfile"
   a. 下载地址 https://gobies.org/#dl
   
   b. 更新说明 https://gobies.org/updates.html
+  
+### 5. 题外话
+
+  其实只是单纯的好奇这个扫描速度好快，后来看了下日志竟然有api相关的东西。想着找一下
