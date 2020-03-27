@@ -1,5 +1,7 @@
 # gobies 对应的api
 
+
+
 ### 0. 获取api信息
 
 ```
@@ -85,3 +87,8 @@ curl 127.0.0.1:8361/api/v1/vulnerabilitySearch -d '{"type": "ip", "query": "task
 测试exp
 curl 127.0.0.1:8361/api/v1/debugExp -d '{"hostinfo":"{{ .HostInfo }}", "vulfile":"{{ .FileName }}"}'
 ```
+
+### 4. gobies相关
+  
+  a. 下载地址 https://gobies.org/#dl
+  b. 更新说明 https://gobies.org/updates.html
