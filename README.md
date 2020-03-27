@@ -6,6 +6,26 @@
 
 ```
 strings goby-cmd |grep ":8361/api/v1"
+
+
+
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/getPocs -d '{"taskid": "{{ $.TaskID }}"}' </span> </br>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/getPOCInfo -d '{"vulname": "{{ .Name }}"}' </span></td>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/getPOCInfo -d '{"vulname": "{{ .Name }}"}' </span> </br>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/vulnerabilitySearch -d '{"type": "ip", "query": "taskid={{ $.TaskID }}"}' </span> </br>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/debugExp -d '{"hostinfo":"{{ .HostInfo }}", "vulfile":"{{ .FileName }}"}' </span>
+Fetch tasks: <span style='color:blue'>curl 127.0.0.1:8361/api/v1/tasks </span> <br/>
+Start scan: <span style='color:blue'>curl 127.0.0.1:8361/api/v1/startScan -d '{"asset":{"ips":["10.10.10.0/24"], "ports":"1-1024"}}' </span> </br>
+curl 127.0.0.1:8361/api/v1/startScan -d '{"asset":{"ips":["10.10.10.0/24"], "ports":"", "vulnerability": {"type": "2"}}}'
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/getIPInfo -d '{"taskid": "{{ $.TaskID }}", "ip": "{{ $.IP }}"}' </span> </br>
+curl 127.0.0.1:8361/api/v1/assetSearch -d '{"query":{{ queryencode $.Query }} }' | jq <br/>
+curl 127.0.0.1:8361/api/v1/getChildrenCategory -d '{"query":{{ queryencode $.Query }} }' | jq <br/>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/getProgress -d '{"taskid":"{{ $.TaskID }}"}' </span> </br>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/assetSearch -d '{"query":"taskid={{ $.TaskID }} "}' | jq </span><br/>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/resumeScan -d '{"taskid":"{{ $.TaskID }}"}' </span> </br>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/stopScan -d '{"taskid":"{{ $.TaskID }}"}' </span> </br>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/getValueCategory -d '{"taskid":"{{ $.TaskID }}"}' </span> </br>
+<span style='color:blue'>curl 127.0.0.1:8361/api/v1/assetDetail -d '{"type": 0, "query": "taskid={{ $.TaskID }}"}' </span> </br>
 ```
 
 ### 1. 开启api
